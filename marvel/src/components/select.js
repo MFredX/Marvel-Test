@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, CardDeck, Card } from "react-bootstrap";
-import styles from "../index.css";
+import "../index.css";
 import ironmanImg from "../media/ironman.png";
 import wolverineImg from "../media/wolverine.png";
 import antmanImg from "../media/antman.png";
@@ -10,18 +10,19 @@ import cyclopsImg from "../media/cyclops.png";
 
 export function SelectHeroPage() {
   return (
-    <div>
-      <h1>Select Your Hero Here</h1>
-      <CardDeck>
-        <Card>
-          {/* className={styles.selectCard} */}
-          {/* <Card.Img variant="top" src="../media/ironman.png" /> */}
+    // <div className="selectpage">
+    <div className="selectpage">
+      <h1 className="selectHero">Select Your Hero Here</h1>
+      <CardDeck className="selectCard">
+        <Card className="selectCardone">
           <Card.Img variant="top" src={ironmanImg} />
           <Card.Body>
             <Card.Title>Iron Man</Card.Title>
             <Card.Text>“I am Iron Man!”</Card.Text>
           </Card.Body>
-          <Button variant="danger">Click for details</Button>
+          <Button id="selectbutton" variant="danger">
+            Click for details
+          </Button>
         </Card>
         <Card>
           <Card.Img variant="top" src={wolverineImg} />
@@ -29,7 +30,9 @@ export function SelectHeroPage() {
             <Card.Title>Wolverine</Card.Title>
             <Card.Text>“I'm Canadian!”</Card.Text>
           </Card.Body>
-          <Button variant="danger">Click for details</Button>
+          <Button class="selectbutton" variant="danger">
+            Click for details
+          </Button>
         </Card>
         <Card>
           <Card.Img variant="top" src={cyclopsImg} />
@@ -39,10 +42,10 @@ export function SelectHeroPage() {
               “ Hey, it's okay... I'm Cyclops. I've been on TV.”
             </Card.Text>
           </Card.Body>
-          <Button variant="danger">Click for details</Button>
+          <Button class="selectbutton" variant="danger">
+            Click for details
+          </Button>
         </Card>
-      </CardDeck>
-      <CardDeck>
         <Card>
           <Card.Img variant="top" src={thorImg} />
           <Card.Body>
@@ -65,7 +68,9 @@ export function SelectHeroPage() {
             <Card.Title>Spider-Man</Card.Title>
             <Card.Text>"It's your friendly neighborhood Spider-Man"</Card.Text>
           </Card.Body>
-          <Button variant="danger">Click for details</Button>
+          <Button class="selectbutton" variant="danger">
+            Click for details
+          </Button>
         </Card>
       </CardDeck>
     </div>

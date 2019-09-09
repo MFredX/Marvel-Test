@@ -17,7 +17,10 @@ function Index() {
   return (
     <div class="bg">
       <h1 class="welcome">Welcome to the Marvel Superhero App</h1>
-      <p class="welcome">An app to access</p>
+      <p class="welcome">
+        An app to access information on your favourite superheroes from the
+        Marvel Comic Universe
+      </p>
       <Link to={"/SelectHero"}>
         <Button id="continue" label="Begin" size="lg">
           Click to Begin
