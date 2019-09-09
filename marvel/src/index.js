@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Link, Redirect } from "react-router-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import { AboutFootballPage } from "./components/aboutfootball";
-import { SelectTeamPage } from "./components/select";
+import { AboutMarvel } from "./components/aboutMarvel";
+import { SelectHeroPage } from "./components/select";
 import { AboutMePage } from "./components/aboutme";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
@@ -16,12 +16,9 @@ import "bootstrap/dist/css/bootstrap.css";
 function Index() {
   return (
     <div class="bg">
-      <h1 class="welcome">Welcome to the Football Mashup App</h1>
-      <p class="welcome">
-        A dashboard to access trending news, stats, fixtures and results of your
-        favourite EPL team
-      </p>
-      <Link to={"/SelectTeam"}>
+      <h1 class="welcome">Welcome to the Marvel Superhero App</h1>
+      <p class="welcome">An app to access</p>
+      <Link to={"/SelectHero"}>
         <Button id="continue" label="Begin" size="lg">
           Click to Begin
         </Button>
@@ -35,8 +32,8 @@ function App() {
   return (
     <Router>
       <Route exact path={"/"} component={Index} />
-      <Route path={"/SelectTeam"} component={SelectTeamPage} />
-      <Route path={"/AboutFootball"} component={AboutFootballPage} />
+      <Route path={"/SelectHero"} component={SelectHeroPage} />
+      <Route path={"/AboutMarvel"} component={AboutMarvel} />
       <Route path={"/AboutMe"} component={AboutMePage} />
     </Router>
   );
