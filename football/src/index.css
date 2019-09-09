@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img.hazard {
+  max-width: 20%;
+  max-height: 20%;
+}
+
+img.pjanic {
+  max-width: 35%;
+  max-height: 35%;
+  background-position: 50% 50%;
+}
+
+h1.welcome {
+  position: absolute;
+  text-align: center;
+  color: aliceblue;
+  height: 100%;
+  display: float;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 8%;
+  padding-left: 4%;
+  margin: 0;
+  font-family: arial;
+  font-size: 230%;
+}
+
+p.welcome {
+  position: absolute;
+  text-align: center;
+  color: aliceblue;
+  height: 100%;
+  display: float;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15%;
+  padding-left: 4%;
+  margin: 0;
+  font-family: arial;
+  font-size: 120%;
+}
+
+div.bg {
+  background-image: url("./media/edenwall.png");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px; /* 50% */
+  }
+}
+
+button#continue {
+  background-color: #034694;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  margin: 20 20 20 20;
+  padding: 200 50 50 50;
+  border: 0;
+}
+
+button#continue:hover {
+  background-color: rgb(37, 222, 247);
+  color: white;
+  border: 0;
+}
