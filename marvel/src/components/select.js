@@ -15,7 +15,6 @@ export function getInnerHeroId(props) {
 }
 
 export function SelectHeroPage() {
-  const [heroID, setheroID] = useState(0);
   return (
     // <div className="selectpage">
     <div className="selectpage">
@@ -34,7 +33,6 @@ export function SelectHeroPage() {
             onClick={e => {
               // setheroID(e.currentTarget.value);
               // alert(e.currentTarget.value);
-              console.log(heroID);
               innerHeroID = e.currentTarget.value;
             }}
           >
