@@ -6,7 +6,7 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { AboutMarvel } from "./components/aboutMarvel";
 import { SelectHeroPage } from "./components/select";
-import { HeroPage } from "./components/hero";
+import HeroPage from "./components/hero";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 

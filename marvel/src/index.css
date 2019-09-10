@@ -114,3 +114,9 @@ div.selectpage {
 .selectbutton {
   padding-bottom: 0;
 }
+
+.SpannerDiv {
+  padding-top: 0;
+  margin-top: 10%;
+  text-align: center;
+}
