@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { browserHistory } from "react-router";
 import { Link } from "react-router-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
@@ -33,7 +34,7 @@ function Index() {
 // This is the main app. Render, show or hide pages in here.
 function App() {
   return (
-    <Router>
+    <Router history={browserHistory}>
       <Route exact path={"/"} component={Index} />
       <Route path={"/SelectHero"} component={SelectHeroPage} />
       <Route path={"/AboutMarvel"} component={AboutMarvel} />

@@ -1,6 +1,7 @@
 import React from "react";
 import { getInnerHeroId } from "./select";
 import { Card, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../index.css";
 
 class HeroPage extends React.Component {
@@ -42,7 +43,6 @@ class HeroPage extends React.Component {
 
     return (
       <div>
-        {/* {<h1>{this.state.marveldata.results[0].name}</h1>} */}
         {console.log(this.state.marveldata.results[0].name)}
         <Card className="bg-dark text-white">
           <Card.Img
@@ -52,14 +52,32 @@ class HeroPage extends React.Component {
               this.state.marveldata.results[0].thumbnail.extension
             }
             alt="Card image"
-            className="imgOverLay"
+            // className="imgOverLay"
           />
           <Card.ImgOverlay>
-            <Card.Title>{this.state.marveldata.results[0].name}</Card.Title>
+            <Card.Title>
+              <h1>{this.state.marveldata.results[0].name}</h1>
+            </Card.Title>
             <Card.Text>
               {this.state.marveldata.results[0].description}
             </Card.Text>
-            <Card.Text>Last updated 3 mins ago</Card.Text>
+            <Card.Text>
+              <b>Comics that the character is present in:</b>
+            </Card.Text>
+            <Card.Text>
+              {this.state.marveldata.results[0].comics.items.map((data, i) => (
+                <li>{data.name}</li>
+              ))}
+            </Card.Text>
+            <Card.Text>
+              <b>Series that the character is part of:</b>
+            </Card.Text>
+            <Card.Text>
+              {this.state.marveldata.results[0].series.items.map((data, i) => (
+                <li>{data.name}</li>
+              ))}
+              <Link to={"/SelectHero"}>Select another hero</Link>
+            </Card.Text>
           </Card.ImgOverlay>
         </Card>
       </div>
