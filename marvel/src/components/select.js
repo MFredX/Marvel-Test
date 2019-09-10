@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, CardDeck, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../index.css";
 import ironmanImg from "../media/ironman.png";
 import wolverineImg from "../media/wolverine.png";
@@ -8,7 +9,13 @@ import thorImg from "../media/thor.png";
 import spidermanImg from "../media/spiderman.png";
 import cyclopsImg from "../media/cyclops.png";
 
+let innerHeroID = "";
+export function getInnerHeroId(props) {
+  return innerHeroID;
+}
+
 export function SelectHeroPage() {
+  const [heroID, setheroID] = useState(0);
   return (
     // <div className="selectpage">
     <div className="selectpage">
@@ -20,8 +27,18 @@ export function SelectHeroPage() {
             <Card.Title>Iron Man</Card.Title>
             <Card.Text>“I am Iron Man!”</Card.Text>
           </Card.Body>
-          <Button id="selectbutton" variant="danger">
-            Click for details
+          <Button
+            className="selectbutton"
+            variant="danger"
+            value="1009368"
+            onClick={e => {
+              // setheroID(e.currentTarget.value);
+              // alert(e.currentTarget.value);
+              console.log(heroID);
+              innerHeroID = e.currentTarget.value;
+            }}
+          >
+            <Link to={"/Hero"}>Click for details</Link>
           </Button>
         </Card>
         <Card>
@@ -30,8 +47,16 @@ export function SelectHeroPage() {
             <Card.Title>Wolverine</Card.Title>
             <Card.Text>“I'm Canadian!”</Card.Text>
           </Card.Body>
-          <Button class="selectbutton" variant="danger">
-            Click for details
+          {/* <Link to={"/Hero"}> */}
+          <Button
+            className="selectbutton"
+            variant="danger"
+            value="1009718"
+            onClick={e => {
+              innerHeroID = e.currentTarget.value;
+            }}
+          >
+            <Link to={"/Hero"}>Click for details</Link>
           </Button>
         </Card>
         <Card>
@@ -42,8 +67,15 @@ export function SelectHeroPage() {
               “ Hey, it's okay... I'm Cyclops. I've been on TV.”
             </Card.Text>
           </Card.Body>
-          <Button class="selectbutton" variant="danger">
-            Click for details
+          <Button
+            className="selectbutton"
+            variant="danger"
+            value="1009257"
+            onClick={e => {
+              innerHeroID = e.currentTarget.value;
+            }}
+          >
+            <Link to={"/Hero"}>Click for details</Link>
           </Button>
         </Card>
         <Card>
@@ -52,7 +84,16 @@ export function SelectHeroPage() {
             <Card.Title>Thor</Card.Title>
             <Card.Text>“I notice you've copied my beard.”</Card.Text>
           </Card.Body>
-          <Button variant="danger">Click for details</Button>
+          <Button
+            className="selectbutton"
+            variant="danger"
+            value="1009664"
+            onClick={e => {
+              innerHeroID = e.currentTarget.value;
+            }}
+          >
+            <Link to={"/Hero"}>Click for details</Link>
+          </Button>
         </Card>
         <Card>
           <Card.Img variant="top" src={antmanImg} />
@@ -60,7 +101,16 @@ export function SelectHeroPage() {
             <Card.Title>Ant-Man</Card.Title>
             <Card.Text>"Pick someone your own size!". </Card.Text>
           </Card.Body>
-          <Button variant="danger">Click for details</Button>
+          <Button
+            className="selectbutton"
+            variant="danger"
+            value="1010802"
+            onClick={e => {
+              innerHeroID = e.currentTarget.value;
+            }}
+          >
+            <Link to={"/Hero"}>Click for details</Link>
+          </Button>
         </Card>
         <Card>
           <Card.Img variant="top" src={spidermanImg} />
@@ -68,8 +118,15 @@ export function SelectHeroPage() {
             <Card.Title>Spider-Man</Card.Title>
             <Card.Text>"It's your friendly neighborhood Spider-Man"</Card.Text>
           </Card.Body>
-          <Button class="selectbutton" variant="danger">
-            Click for details
+          <Button
+            className="selectbutton"
+            variant="danger"
+            value="1009610"
+            onClick={e => {
+              innerHeroID = e.currentTarget.value;
+            }}
+          >
+            <Link to={"/Hero"}>Click for details</Link>
           </Button>
         </Card>
       </CardDeck>

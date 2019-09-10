@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { AboutMarvel } from "./components/aboutMarvel";
 import { SelectHeroPage } from "./components/select";
-import { AboutMePage } from "./components/aboutme";
+import { HeroPage } from "./components/hero";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -15,9 +15,9 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function Index() {
   return (
-    <div class="bg">
-      <h1 class="welcome">Welcome to the Marvel Superhero App</h1>
-      <p class="welcome">
+    <div className="bg">
+      <h1 className="welcome">Welcome to the Marvel Superhero App</h1>
+      <p className="welcome">
         An app to access information on your favourite superheroes from the
         Marvel Comic Universe
       </p>
@@ -37,7 +37,7 @@ function App() {
       <Route exact path={"/"} component={Index} />
       <Route path={"/SelectHero"} component={SelectHeroPage} />
       <Route path={"/AboutMarvel"} component={AboutMarvel} />
-      <Route path={"/AboutMe"} component={AboutMePage} />
+      <Route path={"/Hero"} component={HeroPage} />
     </Router>
   );
 }
